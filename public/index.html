@@ -188,9 +188,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2026-03-23 00:12:37 / Modified: 18:37:42" itemprop="dateCreated datePublished" datetime="2026-03-23T00:12:37+08:00">2026-03-23</time>
+      <time title="Created: 2026-03-23 00:12:37" itemprop="dateCreated datePublished" datetime="2026-03-23T00:12:37+08:00">2026-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-03-24 21:43:05" itemprop="dateModified" datetime="2026-03-24T21:43:05+08:00">2026-03-24</time>
     </span>
 
   
@@ -269,6 +275,17 @@ ARP分三类
 1.检测地址重复，发出去让其他设备记录
 2.检测地址冲突
 </code></pre>
+<h1 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h1><p>A、B、C、D、E<br>A、B、C：单播地址：设备基本用的单播地址，一对一通信<br>SIP&#x2F;DIP，既能做SIP也能充当DIP<br>D：组播地址，只能充当DIP<br>E：保留地址</p>
+<p>A：0xxx xxxx 0-127(1-126) 掩码255.0.0.0 2<em>24 大型网络<br>B:10xx xxxx 128-191 255.255.0.0 2</em>16 中型网络<br>C: 110x xxxx 192–223 255.255.255.0 2*8 小型网络<br>D:1110 xxxx 224-239<br>E:1111 xxxx 240-255</p>
+<p>无类别地址</p>
+<ol>
+<li>127.0.0.1—-127.255.255.255 环回地址</li>
+<li>255.255.255.255 受限广播地址</li>
+<li>主机位全1 192.168.1.X&#x2F;24—192.168.1.255直接广播地址*–广播炸弹</li>
+<li>主机位全0</li>
+<li>0.0.0.0<br>1.代表没有地址</li>
+<li>169.254.0.0&#x2F;16</li>
+</ol>
 
       
     </div>
