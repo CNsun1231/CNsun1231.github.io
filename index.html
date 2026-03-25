@@ -418,7 +418,7 @@ ARP分三类
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-03-24 22:47:42" itemprop="dateModified" datetime="2026-03-24T22:47:42+08:00">2026-03-24</time>
+      <time title="Modified: 2026-03-25 20:46:32" itemprop="dateModified" datetime="2026-03-25T20:46:32+08:00">2026-03-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,36 +443,65 @@ ARP分三类
           <h1 id="Linux-学习笔记"><a href="#Linux-学习笔记" class="headerlink" title="Linux 学习笔记"></a>Linux 学习笔记</h1><p>这里记录 Linux 操作系统相关的学习内容，包括命令、运维、配置等。</p>
 <h1 id="一-理解操作系统中的名词"><a href="#一-理解操作系统中的名词" class="headerlink" title="一.理解操作系统中的名词"></a>一.理解操作系统中的名词</h1><h2 id="1-什么是Linux"><a href="#1-什么是Linux" class="headerlink" title="1.什么是Linux"></a>1.什么是Linux</h2><p>Linux是一种内核（kernel），负责对于系统软件运行的调度，相当于人的大脑，只有内核可以直接调度<br>硬件<br>内核是操作系统最基本的部分。它是为众多应用程序提供对计算机硬件的安全访问的一部分软件，这种<br>访问是有限的，并且内核决定一个程序在什么时候对某部分硬件操作多长时间</p>
 <h2 id="2-什么是shell"><a href="#2-什么是shell" class="headerlink" title="2.什么是shell"></a>2.什么是shell</h2><p>内核的保护机制，负责对软件请求进行分析处理和屏蔽，同时提供一个和操作者沟通的交互界面</p>
-<h1 id="二-Linux操作系统中命令行使技巧"><a href="#二-Linux操作系统中命令行使技巧" class="headerlink" title="二.Linux操作系统中命令行使技巧"></a>二.Linux操作系统中命令行使技巧</h1><p>1.如何开启shell</p>
-<p>应用程序——–&gt;终端</p>
+<h1 id="二-Linux操作系统中命令行使技巧"><a href="#二-Linux操作系统中命令行使技巧" class="headerlink" title="二.Linux操作系统中命令行使技巧"></a>二.Linux操作系统中命令行使技巧</h1><h2 id="1-如何开启shell"><a href="#1-如何开启shell" class="headerlink" title="1.如何开启shell"></a>1.如何开启shell</h2><p>应用程序——–&gt;终端</p>
 <p>在桌面右键选择在终端中打开</p>
-<p>2.如何调整字体大小</p>
-<p>ctrl+减号   字体变小<br>ctrl+shift+加号 字体变大</p>
-<p>3.如何在shell中输入命令</p>
-<p>（1）命令必须在提示符之后输入否则无法运行<br>（2）如果提示符被占用，可以使用ctrl+c结束占用程序</p>
-<p>4.命令行中历史调用<br>我们当前使用的shell可以记录系统中执行过的历史命令</p>
+<h2 id="2-如何调整字体大小"><a href="#2-如何调整字体大小" class="headerlink" title="2.如何调整字体大小"></a>2.如何调整字体大小</h2><p>ctrl+减号   字体变小<br>ctrl+shift+加号 字体变大</p>
+<h2 id="3-如何在shell中输入命令"><a href="#3-如何在shell中输入命令" class="headerlink" title="3.如何在shell中输入命令"></a>3.如何在shell中输入命令</h2><p>（1）命令必须在提示符之后输入否则无法运行<br>（2）如果提示符被占用，可以使用ctrl+c结束占用程序</p>
+<h2 id="4-命令行中历史调用"><a href="#4-命令行中历史调用" class="headerlink" title="4.命令行中历史调用"></a>4.命令行中历史调用</h2><p>我们当前使用的shell可以记录系统中执行过的历史命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">history   #查看历史命令</span><br><span class="line">history -c #清空当前历史命令</span><br><span class="line">            #永久清空历史记录需要.bash_history</span><br></pre></td></tr></table></figure>
 
 <p>历史命令的调用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">上建|下键       #逐行运行</span><br><span class="line">！数字          #调运指定行历史</span><br><span class="line">！字符          #调用以此字符开头的最近历史</span><br><span class="line">&lt;ctrl&gt;+&lt;R&gt;      #（reverse-i-search）:输入关键字</span><br><span class="line">            #会显示还有此关键字的最近一条历史</span><br></pre></td></tr></table></figure>
 
-<p>5.如何在命令行中的自动补全</p>
-<p>补齐系统中存在的命令，文件，和某些命令的参数</p>
+<h2 id="5-如何在命令行中的自动补全"><a href="#5-如何在命令行中的自动补全" class="headerlink" title="5.如何在命令行中的自动补全"></a>5.如何在命令行中的自动补全</h2><p>补齐系统中存在的命令，文件，和某些命令的参数</p>
 <p>当按一次tab没有效果，表示以此字符开头的信息不唯一可连续按2次</p>
 <p>那么会把以此字符开头的所有内容显示</p>
 <p>如果2此仍然不显示表示没有以此字符开头的指令</p>
-<h1 id="三-在系统中如何过的帮助"><a href="#三-在系统中如何过的帮助" class="headerlink" title="三.在系统中如何过的帮助"></a>三.在系统中如何过的帮助</h1><p>1.查看命令的共能</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">whatis rm   #查看命令的基本用途</span><br><span class="line"></span><br><span class="line">查看过程中出现  #rm:nonthing appropriate.</span><br><span class="line">1.表示要查看的能容没有帮助</span><br><span class="line">2.系统帮助数据未更新用mandb命令更新</span><br></pre></td></tr></table></figure>
+<h1 id="三-在系统中如何过的帮助"><a href="#三-在系统中如何过的帮助" class="headerlink" title="三.在系统中如何过的帮助"></a>三.在系统中如何过的帮助</h1><h2 id="1-查看命令的共能"><a href="#1-查看命令的共能" class="headerlink" title="1.查看命令的共能"></a>1.查看命令的共能</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">whatis rm   #查看命令的基本用途</span><br><span class="line"></span><br><span class="line">查看过程中出现  #rm:nonthing appropriate.</span><br><span class="line">(1).表示要查看的能容没有帮助</span><br><span class="line">(2)系统帮助数据未更新用mandb命令更新</span><br></pre></td></tr></table></figure>
 
-<p>2.命令的简要帮助查看方式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm --help       查看命令的基本用法</span><br></pre></td></tr></table></figure>
+<h2 id="2-命令的简要帮助查看方式"><a href="#2-命令的简要帮助查看方式" class="headerlink" title="2.命令的简要帮助查看方式"></a>2.命令的简要帮助查看方式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm --help       查看命令的基本用法</span><br></pre></td></tr></table></figure>
 
-<p>3.命令的详细帮助查看方式</p>
-<p>man 命令是manual的缩写。在Linux中可以使用man + 要查看的帮助元素来查看帮助</p>
+<h2 id="3-命令的详细帮助查看方式"><a href="#3-命令的详细帮助查看方式" class="headerlink" title="3.命令的详细帮助查看方式"></a>3.命令的详细帮助查看方式</h2><p>man 命令是manual的缩写。在Linux中可以使用man + 要查看的帮助元素来查看帮助</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">man 在查看帮助时有很多级别，具体级别如下</span><br><span class="line"></span><br><span class="line">man -k passwd       passwd关键字有多少级别的man</span><br><span class="line"></span><br><span class="line">man的级别</span><br><span class="line">1.命令</span><br><span class="line">2.系统调用</span><br><span class="line">3.函数库调用</span><br><span class="line">4.特殊文字（设备文件等）</span><br><span class="line">5.文件</span><br><span class="line">6.游戏</span><br><span class="line">7.特殊的包</span><br><span class="line">8.系统管理命令</span><br><span class="line">9.内核信息规则</span><br></pre></td></tr></table></figure>
 
-<p>4.在man帮助中常用快捷键</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">man rm      进入到rm命令的帮助</span><br><span class="line">q           推出</span><br><span class="line">/关键字      搜索关键字，n 乡下匹配， N 向上匹配</span><br><span class="line">G            快速移动到man的最后</span><br><span class="line">g             表示快速移动到man的最前</span><br></pre></td></tr></table></figure>
+<h2 id="4-在man帮助中常用快捷键"><a href="#4-在man帮助中常用快捷键" class="headerlink" title="4.在man帮助中常用快捷键"></a>4.在man帮助中常用快捷键</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">man rm      进入到rm命令的帮助</span><br><span class="line">q           推出</span><br><span class="line">/关键字      搜索关键字，n 乡下匹配， N 向上匹配</span><br><span class="line">G            快速移动到man的最后</span><br><span class="line">g             表示快速移动到man的最前</span><br></pre></td></tr></table></figure>
+
+<h1 id="四-Linux下常用的文件管理命令"><a href="#四-Linux下常用的文件管理命令" class="headerlink" title="四.Linux下常用的文件管理命令"></a>四.Linux下常用的文件管理命令</h1><h2 id="1-文件和目录的建立"><a href="#1-文件和目录的建立" class="headerlink" title="1.文件和目录的建立"></a>1.文件和目录的建立</h2><p>touch命令<br>touch通常用来建新文件或修改时间戳</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">touch +文件名       建立空文件</span><br><span class="line">touch +文件名       吧文件时间同步到当前时间</span><br><span class="line">touch -t YYYMMDDHHmm +文件名        把文件时间更改到指定时间</span><br></pre></td></tr></table></figure>
+
+<p>mkdir命令<br>mkdir通常用来建立目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir +目录名        建立空目录</span><br><span class="line">mkdir +test/redhat/linux        建立多层文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-文件和目录的删除"><a href="#2-文件和目录的删除" class="headerlink" title="2.文件和目录的删除"></a>2.文件和目录的删除</h2><p>rm命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm +文件名      删除文件有提示</span><br><span class="line">rm -f +文件名       强制删除文件不提示</span><br><span class="line">rm -r +目录名      删除目录</span><br><span class="line">rm -rf +目录名      删除文件或目录不提示</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-文件编辑命令"><a href="#3-文件编辑命令" class="headerlink" title="3.文件编辑命令"></a>3.文件编辑命令</h2><p>gedit 命令<br>当系统图形开启时可以使用gedit来对文件进行编辑，gedit依赖于图形，只有开启图形时才能使用gedit<br>命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit           编辑文件</span><br></pre></td></tr></table></figure>
+
+<p>vim命令<br>系统中最最常用的文本编辑命令<br>vim通常有三种模式：<br>（1）浏览模式（命令模式）：可以对文件内容进行浏览，也可以对vim的工作方式进行设定<br>（2）插入模式：vim的编辑模式，只有在插入模式下才能对文件内容进行修改<br>（3）推出模式：当文件内容修修改完毕可以通过退出模式来保存或不保存修改的内容</p>
+<p>vim的基本使用方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim +文件名          进入到vim的浏览模式</span><br><span class="line">                    浏览模式不能编辑文件</span><br><span class="line">                    在浏览模式中按&lt;i&gt;进入插入模式</span><br><span class="line">                    在vim中鼠标不能控制光标移动</span><br><span class="line">                    按&lt;Esc&gt;推出插入模式</span><br><span class="line">                    按:wq保存更改</span><br><span class="line">                    :q 当vim打开文件后未操作可以直接退出</span><br><span class="line">                    :q! 当vim打开文件后修改文件内容但不想保存可以强制退出</span><br></pre></td></tr></table></figure>
+
+<p>处理vim的异常退出</p>
+<p>当vim编写文件时在未保存更改内容被强制关闭，那么vim进入异常模式，当再次用vim打开文件后文件<br>出现异常</p>
+<p>处理方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[O]     只读打开文件</span><br><span class="line">(E)     继续编辑</span><br><span class="line">(R)     恢复未保存内容编辑</span><br><span class="line">(D)     删除.swp文件进入编辑</span><br><span class="line">(Q)     退出当前文件编辑</span><br><span class="line">(A)     推出vim程序</span><br></pre></td></tr></table></figure>
+
+<p>vim同时打开多个文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim -o 文件名 文件名 ····       上下模式打开两个文件</span><br><span class="line">                                &lt;ctrl&gt;+&lt;w&gt; &lt;上|下&gt;来转换控制窗口</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-查看文件"><a href="#4-查看文件" class="headerlink" title="4.查看文件"></a>4.查看文件</h2><p>cat命令<br>用于显示文件的所有内容到屏幕</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat 文件名  </span><br><span class="line">cat -b 文件名       显示文件内容并显示行号，不显示空的行号</span><br><span class="line">cat -n 文件名       显示文件内容并显示行号</span><br></pre></td></tr></table></figure>
+
+<p>less命令<br>用来分页浏览文件内容</p>
+<pre><code>less 文件名         进入到less模式查看westos
+                    less模式中&lt;上&gt;&lt;下&gt;逐行查看文件内容
+                    &lt;pgup&gt;&lt;pgdn&gt;主页查看文件内容
+                    /关键字 搜索关键字 n 向下匹配 N 向上匹配
+                    &lt;v&gt; 有less模式进入到vim 编辑完成:wq推出返回less
+                    在less中&lt;q&gt;退出
+</code></pre>
+
       
     </div>
 
