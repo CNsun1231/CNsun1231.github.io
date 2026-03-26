@@ -418,7 +418,7 @@ ARP分三类
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-03-25 20:46:32" itemprop="dateModified" datetime="2026-03-25T20:46:32+08:00">2026-03-25</time>
+      <time title="Modified: 2026-03-26 17:03:24" itemprop="dateModified" datetime="2026-03-26T17:03:24+08:00">2026-03-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -494,14 +494,50 @@ ARP分三类
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat 文件名  </span><br><span class="line">cat -b 文件名       显示文件内容并显示行号，不显示空的行号</span><br><span class="line">cat -n 文件名       显示文件内容并显示行号</span><br></pre></td></tr></table></figure>
 
 <p>less命令<br>用来分页浏览文件内容</p>
-<pre><code>less 文件名         进入到less模式查看westos
-                    less模式中&lt;上&gt;&lt;下&gt;逐行查看文件内容
-                    &lt;pgup&gt;&lt;pgdn&gt;主页查看文件内容
-                    /关键字 搜索关键字 n 向下匹配 N 向上匹配
-                    &lt;v&gt; 有less模式进入到vim 编辑完成:wq推出返回less
-                    在less中&lt;q&gt;退出
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">less 文件名         进入到less模式查看westos</span><br><span class="line">                    less模式中&lt;上&gt;&lt;下&gt;逐行查看文件内容</span><br><span class="line">                    &lt;pgup&gt;&lt;pgdn&gt;主页查看文件内容</span><br><span class="line">                    /关键字 搜索关键字 n 向下匹配 N 向上匹配</span><br><span class="line">                    &lt;v&gt; 有less模式进入到vim 编辑完成:wq推出返回less</span><br><span class="line">                    在less中&lt;q&gt;退出</span><br></pre></td></tr></table></figure>
+<p>head 命令<br>head通常用来查看文件的前几行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">head 文件名     默认显示文件前十行</span><br><span class="line">head -n 文件名      代表数字 显示文件的前n行</span><br></pre></td></tr></table></figure>
 
+<p>tail 命令<br>tail用来查看文件的后几行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tail 文件名     默认显示文件后10行</span><br><span class="line">tail -n 文件名      n 代表数字 显示文件的后n行</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-文件的复制和移动"><a href="#5-文件的复制和移动" class="headerlink" title="5.文件的复制和移动"></a>5.文件的复制和移动</h2><p>cp 命令<br>cp用来做文件或目录的复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cp 文件 目的地文件</span><br><span class="line">                    cp 文件1 文件2 目的地目录</span><br><span class="line">                    cp -r 目标1 目标2</span><br><span class="line">                    复制原理：</span><br><span class="line">                    按照源文件建立新文件（抄作业）</span><br></pre></td></tr></table></figure>
+
+<p>mv命令<br>用来做文件或目录的移动和重命名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mv 文件名 文件名 文件名</span><br><span class="line">                        重命名</span><br><span class="line">                        移动原理：</span><br><span class="line">                        相同设备分区中的文件移动是重命名过程</span><br><span class="line">                        不同分区的文件移动是建立删除的过程</span><br><span class="line">                        ls -i 文件名 查看文件节点号（相当于文件身份证号）</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-文件统计命令"><a href="#6-文件统计命令" class="headerlink" title="6.文件统计命令"></a>6.文件统计命令</h2><p>file 命令</p>
+<p>查看文件类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file 文件名     查看westos的真实类型</span><br></pre></td></tr></table></figure>
+
+<p>wc 命令</p>
+<p>统计文件大小</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wc -l 行数</span><br><span class="line">wc -m 字符数</span><br><span class="line">wc -w 单词书</span><br><span class="line">wc -c 字节数</span><br></pre></td></tr></table></figure>
+
+<p>ls 命令</p>
+<p>ls通常用于列出文件指定信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ls  显示当前目录中文件名称</span><br><span class="line">ls 文件名   显式指定文件名称</span><br><span class="line">ls 目录名   显式指定目录中内容的名称</span><br><span class="line">ls -d 目录名    显示目录本身名称</span><br><span class="line">ls -l 文件名    显示文件属性</span><br><span class="line">ls -l 目录名    显示目录中内容的属性</span><br><span class="line">ls -ld 目录名   显示目录本身属性</span><br><span class="line">ls -a 目录名    显示目录中所有文件名称包括隐藏文件</span><br><span class="line">ls -s 文件名   显示文件大小</span><br><span class="line">ls -R 目录名   递归显示目录中的内容</span><br></pre></td></tr></table></figure>
+
+<h1 id="五-Linux下的文件寻址"><a href="#五-Linux下的文件寻址" class="headerlink" title="五. Linux下的文件寻址"></a>五. Linux下的文件寻址</h1><h2 id="1-Linux的层级结构"><a href="#1-Linux的层级结构" class="headerlink" title="1.Linux的层级结构"></a>1.Linux的层级结构</h2><p>Linux中一切皆文件</p>
+<p>Linux是倒树形结构，顶级目录为”&#x2F;“(根目录)，系统遵循FHS（Filesystem Hierarchy Standard）Linux层级结构标准3</p>
+<h2 id="2-系统中的寻址方式"><a href="#2-系统中的寻址方式" class="headerlink" title="2.系统中的寻址方式"></a>2.系统中的寻址方式</h2><p>相对路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">绝对路径名称的简写，省略了用户当前所在的系统位置</span><br><span class="line"></span><br><span class="line">此名称只有在管理当前所在系统目录中子文件时才能使用</span><br><span class="line"></span><br><span class="line">系统中不以/开有的文件名称都为相对路径在程序操作时</span><br><span class="line"></span><br><span class="line">会自动识别当前路径的信息并关联操作目标</span><br></pre></td></tr></table></figure>
+
+<p>绝对路径 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">文件在系统中的真实位置,在任何场景下都可以使用</span><br><span class="line"></span><br><span class="line">通常以/开头，不会考虑当前系统位置</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-寻址相关命令"><a href="#3-寻址相关命令" class="headerlink" title="3.寻址相关命令"></a>3.寻址相关命令</h2><p>pwd         显示当前工作目录</p>
+<p>cd<br>切换当前工作目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd  切换到当前用户家目录</span><br><span class="line">&quot;cd ~-&quot; = &quot; cd -&quot; CDIR &lt;--&gt; ODIR</span><br><span class="line">&quot;..&quot; 当前目录的上级目录</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-文件批处理"><a href="#4-文件批处理" class="headerlink" title="4.文件批处理"></a>4.文件批处理</h2><p>通配符<br>通配符使用符号匹配一类字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*               匹配0～任意字符</span><br><span class="line">?               匹配单个字符</span><br><span class="line">[[:alpha:]]     匹配单个字母</span><br><span class="line">[[:lower:]]     匹配单个小写字母</span><br><span class="line">[[:upper:]]     匹配单个大写字母</span><br><span class="line">[[:digit:]]     匹配单个数字</span><br><span class="line">[[:alnum:]]     匹配单个数字或字母</span><br><span class="line">[[:punct:]]     匹配单个符号</span><br><span class="line">[[:space:]]     匹配单个空格</span><br></pre></td></tr></table></figure>
+
+<p>字符集合表示方式<br>[]<br>条件是或者关系是模糊匹配，对象和几个对比匹配就操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1-10] 1到10 [!d-f]|[^d-f]   除了d-f以外</span><br></pre></td></tr></table></figure>
+<p>{}<br>点名机制，经精确指定集合中的每一个元素</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;1..10&#125;     1-10 </span><br><span class="line">&#123;a..c&#125;      a-c</span><br></pre></td></tr></table></figure>
       
     </div>
 
